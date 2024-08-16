@@ -2,73 +2,103 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="Yemane Teame">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sample Form</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <form action="result.html" method="post" enctype="multipart/form-data">
         <h2>Personal Information</h2>
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" placeholder="Your first name..." required>
+        <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Your first name..." required>
+        </div>
 
-        <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" placeholder="Your last name..." required>
+        <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Your last name..." required>
+        </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Email" required>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+        </div>
 
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age" placeholder="Enter Age" required>
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="Enter Age" required>
+        </div>
 
-        <label for="birthday">Birthday:</label>
-        <input type="date" id="birthday" name="birthday" required>
+        <div class="form-group">
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday" required>
+        </div>
 
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" placeholder="Phone">
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Phone">
+        </div>
 
         <h2>Preferences</h2>
-        <label for="season">Favorite Season:</label>
-        <input type="radio" id="winter" name="season" value="Winter">
-        <label for="winter">Winter</label>
-        <input type="radio" id="summer" name="season" value="Summer">
-        <label for="summer">Summer</label>
+        <div class="form-group">
+            <label for="season">Favorite Season:</label>
+            <input type="radio" id="winter" name="season" value="Winter">
+            <label for="winter">Winter</label>
+            <input type="radio" id="summer" name="season" value="Summer">
+            <label for="summer">Summer</label>
+        </div>
 
-        <label for="username">User Name:</label>
-        <input type="text" id="username" name="username" placeholder="Username" required>
+        <div class="form-group">
+            <label for="username">User Name:</label>
+            <input type="text" id="username" name="username" placeholder="Username" required>
+        </div>
 
-        <label for="preference">Do you prefer Nighttime or Daytime:</label>
-        <input type="radio" id="night" name="preference" value="Night">
-        <label for="night">Night</label>
-        <input type="radio" id="day" name="preference" value="Day">
-        <label for="day">Day</label>
+        <div class="form-group">
+            <label for="preference">Do you prefer Nighttime or Daytime:</label>
+            <input type="radio" id="night" name="preference" value="Night">
+            <label for="night">Night</label>
+            <input type="radio" id="day" name="preference" value="Day">
+            <label for="day">Day</label>
+        </div>
 
-        <label for="weekday">Favorite Weekday:</label>
-        <select id="weekday" name="weekday">
-            <option value="Monday">Monday</option>
-            <option value="Tuesday">Tuesday</option>
-            <option value="Wednesday">Wednesday</option>
-            <option value="Thursday">Thursday</option>
-            <option value="Friday">Friday</option>
-            <option value="Saturday">Saturday</option>
-            <option value="Sunday">Sunday</option>
-        </select>
+        <div class="form-group">
+            <label for="weekday">Favorite Weekday:</label>
+            <select id="weekday" name="weekday">
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+            </select>
+        </div>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" placeholder="Password" required>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+        </div>
 
-        <label for="comments">Tell us what you think:</label>
-        <textarea id="comments" name="comments" placeholder="Your comments..."></textarea>
+        <div class="form-group">
+            <label for="comments">Tell us what you think:</label>
+            <textarea id="comments" name="comments" placeholder="Your comments..."></textarea>
+        </div>
 
-        <label for="url">URL:</label>
-        <input type="url" id="url" name="url" placeholder="URL">
+        <div class="form-group">
+            <label for="url">URL:</label>
+            <input type="url" id="url" name="url" placeholder="URL">
+        </div>
 
-        <label for="color">Favorite Color:</label>
-        <input type="color" id="color" name="color">
+        <div class="form-group">
+            <label for="color">Favorite Color:</label>
+            <input type="color" id="color" name="color">
+        </div>
 
         <!-- File input field -->
-        <label for="file">Choose file:</label>
-        <input type="file" id="file" name="file">
+        <div class="form-group">
+            <label for="file">Choose file:</label>
+            <input type="file" id="file" name="file">
+        </div>
 
         <div class="buttons">
             <input type="reset" value="Reset">
@@ -77,8 +107,6 @@
     </form>
 </body>
 </html>
-               
-
            
 
 
