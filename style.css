@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  background-color: #1c2333;
+  color: #fff;
+  font-family: Arial;
+  text-align: center
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.wrapper>div {
+  flex: 1;
+}
+
+h2{
+  text-align: center;
+  color: #e95f07;
+}
+
+input{
+  background-color: #d1d1d1;
+  color: #000;
+  border-radius: 5px;
+}
