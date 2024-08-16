@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Submission Result</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Results</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
-    <h1>Thank you for your submission!</h1>
-    <p>We have received your information.</p>
+  <div id="results"></div>
+    <button type="button" class="button"><a href="index.html" style="text-decoration: none; background-color: #d1d1d1; color: #000">Back to Form</a></button>
+    <script>
+      const resultsList =
+      document.getElementById('results')
+      new URLSearchParams(window.location.search).forEach((name, password) => {
+        resultsList.append(`${name}: ${password}`)
+        resultsList.append(document.createElement('br'))
+      })
+    </script>
+
 </body>
 </html>
