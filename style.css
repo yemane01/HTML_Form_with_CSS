@@ -21,6 +21,10 @@ h2 {
     color: #4CAF50;
 }
 
+.form-group {
+    margin-bottom: 20px;
+}
+
 label {
     display: block;
     margin-bottom: 8px;
@@ -40,7 +44,6 @@ textarea,
 select {
     width: 100%;
     padding: 12px;
-    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
