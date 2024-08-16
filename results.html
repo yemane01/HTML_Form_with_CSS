@@ -1,23 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="author" content="Yemane Teame"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Yemane Teame">
   <title>Results</title>
-  <link href="style.css" rel="stylesheet" type="text/css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    #results {
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background-color: #f9f9f9;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    a:hover {
+      background-color: #0056b3;
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
+  <h1> Results Page</h1>
   <div id="results"></div>
-    <button type="button" class="button"><a href="index.html" style="text-decoration: none; background-color: #d1d1d1; color: #000">Back to Form</a></button>
-    <script>
-      const resultsList =
-      document.getElementById('results')
-      new URLSearchParams(window.location.search).forEach((name, password) => {
-        resultsList.append(`${name}: ${password}`)
-        resultsList.append(document.createElement('br'))
-      })
-    </script>
+  <a href="index.html">Back to Form</a>
 
+  <script>
+    const resultsList = document.getElementById('results')
+    const params = new URLSearchParams(window.location.search);
+
+    // Create and append table to results
+    const table = document.createElement('table');
+    const tableBody = document.createElement('tbody');
+
+    // Iterate over each parameter and add it to the table
+    params.forEach((value, key) => {
+      const row = document.createElement('tr');
+      const cellKey = document.createElement('td');
+      cellKey.textContent = key + ':';
+      const cellValue = document.createElement('td');
+      cellValue.textContent = value;
+      row.appendChild(cellKey);
+      row.appendChild(cellValue);
+      tableBody.appendChild(row);
+    });
+
+    table.appendChild(tableBody);
+    resultsList.appendChild(table);
+
+  </script>
 </body>
+
 </html>
